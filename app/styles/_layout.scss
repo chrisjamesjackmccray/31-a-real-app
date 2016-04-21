@@ -1,0 +1,77 @@
+//
+// #map  {
+//   width: vw;
+//   height: vh;
+// }
+
+// Start Register Styles
+
+
+.registerdiv {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  border: 2px solid lightgray;
+
+  .registerinside {
+    width: 350px;
+    height: 100px;
+    margin: 40px 0 0 30px;
+
+    .registerbutton {
+      cursor: pointer;
+
+    }
+
+
+  }
+}
+.registerdiv:hover {
+  background-color: #efefef;
+}
+
+h3 {
+  margin: 0 0 0 110px;
+  font-size: 3rem;
+
+}
+
+// End Register Styles
+
+
+// Start Profile Styles
+
+.title {
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  border-bottom: 2px solid lightgray;
+
+  .title:hover {
+    background-color: lightgray;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin: 0 0 0 140px;
+  }
+
+  .profilebutton {
+    width: 40px;
+    height: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
+
+// End Profile Styles
+
+// Start Login Styles
+
+.loginbox {
+  width: 400px;
+  height: 100px;
+  border-bottom: 1px solid lightgray;
+  float: right;
+
+}
