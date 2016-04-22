@@ -8,21 +8,21 @@ class LocationsService {
     return this.locations;
   }
 
+  new() {
+  return {
+     address: "",
+     city: "",
+     State: ""
+  };
 }
 
-new() {
-return {
-   address: "",
-   city: "",
-   State: ""
-};
+  all() {
+    return this.locations;
+  }
 
-all() {
-  return this.locations;
-}
-
-add(item) {
-  this.locations.$add(item);
+  add(item) {
+    this.locations.$add(item);
+  }
 }
 
 export default LocationsService
