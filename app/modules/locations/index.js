@@ -1,12 +1,13 @@
-// import angular from 'angular';
-//
-// import config from './config';
-// import controller fomr './controller';
-//
-// let map = angular.module(tiy.map, []);
-//
-// map.config(config);
-//
-// map.controller('MapController', controller);
-//
-// export default map;
+import angular from 'angular';
+
+import config from '/config';
+import controller from '/controller';
+import service from '/service';
+
+let locations = angular.module(tiy.locations, []);
+
+locations.config(config);
+
+locations.controller('LocationsController', controller);
+
+export default locations;

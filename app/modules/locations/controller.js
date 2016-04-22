@@ -1,10 +1,37 @@
-// class MapController {
-//   constructor() {
-//     this.addresses = [
-//       {
-//         address: "500 President Clinton Ave",
-//         city: "Little Rock",
-//         State: "Arkansas"
+class LocationsController {
+
+  constructor($firebaseArray) {
+    let ref = new Firebase("https://29-auth-services.firebaseio.com/");
+    this.list = $firebaseArray(ref);
+    this.random = "";
+    this.item = "";
+
+
+
+    .isLoggedIn()
+      .then((response) => {
+        this.user = response;
+      })
+      .catch((error) => {
+        this._$state.go("login");
+    })
+  }
+}
+
+export default LocationsController;
+
+
+
+
+
+
+
+
+
+//   this.addresses = [ {
+//       address: "500 President Clinton Ave",
+//       city: "Little Rock",
+//       State: "Arkansas"
 //       }
 //
 //       {
@@ -19,14 +46,17 @@
 //
 //   }
 //
-//   yellAddress(e) {
+//     yellAddress(e) {
 //
-//     alert(`Hey, I'm at ${this.addresses[this.id].address}`);
+//       alert(`Hey, I'm at ${this.addresses[this.id].address}`);
+//     }
+//
+//     clickMarker() {
+//
+//     }
 //   }
 //
-//   clickMarker() {
+//   export default LocationsController
 //
-//   }
+//
 // }
-//
-// export default MapController
