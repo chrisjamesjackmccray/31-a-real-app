@@ -38,3 +38,7 @@ h3 {
   height: 100px;
   border-bottom: 1px solid lightgray;
   float: right; }
+
+#ngMap {
+  width: 400px;
+  height: 400px; }

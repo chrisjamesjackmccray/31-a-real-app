@@ -1,55 +1,18 @@
-<form class="locationsform" ng-submit="locationsCtrl.isLoggedIn()">
-   <input class="address" type="text" placeholder="address" ng-model="LocationsCtrl.isLoggedIn()">
-   <input class="city" type="text" placeholder="city" ng-model="LocationsCtrl.isLoggedIn()">
-   <input class="state" type="text" placeholder="state" ng-model="LocationsCtrl.isLoggedIn()">
-</form>
+<form class="locationsform" ng-submit="locationsCtrl.addLocation()">
+   <input class="address" type="text" placeholder="address" ng-model="locationsCtrl.newLocation.address">
+   <input class="city" type="text" placeholder="city" ng-model="locationsCtrl.newLocation.city">
+   <input class="state" type="text" placeholder="state" ng-model="locationsCtrl.newLocation.state">
 
-<div id="ngMap"></div>
+   <input class="locationsbutton" type="submit" value="Submit">
+</form>
 
 <h4> Sample Text </h4>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<ng-map
- center="8 Flag Rd, Little Rock, AR"
+<ng-map center="8 Flag Rd, Little Rock, AR"
 
  zoom="8"
  map-type-id="TERRAIN">
 
- <marker ng-repeat="address in mapCtrl.addresses" position="8 Flag Rd, Little Rock, AR"></marker>
+ <marker ng-repeat="location in locationsCtrl.locations" position="{{ location.address }}, {{ location.city }}, {{ location.state }}"></marker>
 
 </ng-map>

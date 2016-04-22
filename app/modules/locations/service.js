@@ -1,6 +1,7 @@
 class LocationsService {
   constructor($firebaseArray) {
     this.ref = new Firebase("https://29-auth-services.firebaseio.com/");
+    this._$firebaseArray = $firebaseArray;
   }
 
   getLocations(user) {
@@ -12,7 +13,7 @@ class LocationsService {
   return {
      address: "",
      city: "",
-     State: ""
+     state: ""
   };
 }
 
