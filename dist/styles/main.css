@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 20px 0 0 0;
+  background-color: lightgray; }
+
 .registerdiv {
   width: 400px;
   height: 200px;
@@ -39,6 +44,20 @@ h3 {
   border-bottom: 1px solid lightgray;
   float: right; }
 
-#ngMap {
-  width: 400px;
-  height: 400px; }
+.headbox {
+  width: 500px;
+  margin: 0 auto; }
+  .headbox h4 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 3rem; }
+
+.map {
+  width: 100%;
+  height: 800px; }
+
+.locationsform {
+  margin: 0 0 20px 0; }
+
+.locationsbutton {
+  cursor: pointer; }

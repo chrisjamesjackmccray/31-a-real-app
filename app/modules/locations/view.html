@@ -1,18 +1,27 @@
-<form class="locationsform" ng-submit="locationsCtrl.addLocation()">
-   <input class="address" type="text" placeholder="address" ng-model="locationsCtrl.newLocation.address">
-   <input class="city" type="text" placeholder="city" ng-model="locationsCtrl.newLocation.city">
-   <input class="state" type="text" placeholder="state" ng-model="locationsCtrl.newLocation.state">
 
-   <input class="locationsbutton" type="submit" value="Submit">
-</form>
 
-<h4> Sample Text </h4>
+<div class="headbox">
 
-<ng-map center="8 Flag Rd, Little Rock, AR"
+  <h4> Map </h4>  
 
- zoom="8"
- map-type-id="TERRAIN">
+  <form class="locationsform" ng-submit="locationsCtrl.addLocation()">
+     <input class="address" type="text" placeholder="address" ng-model="locationsCtrl.newLocation.address">
+     <input class="city" type="text" placeholder="city" ng-model="locationsCtrl.newLocation.city">
+     <input class="state" type="text" placeholder="state" ng-model="locationsCtrl.newLocation.state">
 
- <marker ng-repeat="location in locationsCtrl.locations" position="{{ location.address }}, {{ location.city }}, {{ location.state }}"></marker>
+     <input class="locationsbutton" type="submit" value="Submit">
+  </form>
 
-</ng-map>
+</div>
+
+<div class="map">
+
+  <ng-map center="8 Flag Rd, Little Rock, AR"
+
+   zoom="8"
+   map-type-id="TERRAIN">
+
+   <marker ng-repeat="location in locationsCtrl.locations" position="{{ location.address }}, {{ location.city }}, {{ location.state }}"></marker>
+
+  </ng-map>
+</div>
