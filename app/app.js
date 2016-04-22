@@ -70,7 +70,7 @@ let App = angular.module('app', [
   'ui.router',
   'firebase',
   // 'ngMap',
-  // 'tiy.map',
+  'tiy.locations',
   'tiy.user'
 ]);
 

@@ -7,7 +7,6 @@ import service from '/service';
 let locations = angular.module(tiy.locations, []);
 
 locations.config(config);
-
 locations.controller('LocationsController', controller);
 
 export default locations;
