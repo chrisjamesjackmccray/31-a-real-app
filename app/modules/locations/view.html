@@ -1,8 +1,10 @@
+<div class="header">
 
+</div>
 
 <div class="headbox">
 
-  <h4> Map </h4>  
+  <h4> Title of the App </h4>
 
   <form class="locationsform" ng-submit="locationsCtrl.addLocation()">
      <input class="address" type="text" placeholder="address" ng-model="locationsCtrl.newLocation.address">
@@ -14,14 +16,15 @@
 
 </div>
 
-<div class="map">
 
-  <ng-map center="8 Flag Rd, Little Rock, AR"
 
-   zoom="8"
-   map-type-id="TERRAIN">
+<ng-map center="8 Flag Rd, Little Rock, AR" class="map"
 
-   <marker ng-repeat="location in locationsCtrl.locations" position="{{ location.address }}, {{ location.city }}, {{ location.state }}"></marker>
+ zoom="8"
+ map-type-id="TERRAIN">
 
-  </ng-map>
-</div>
+ <marker ng-repeat="location in locationsCtrl.locations" position="{{ location.address }}, {{ location.city }}, {{ location.state }}"></marker>
+
+</ng-map>
+
+<hr>
