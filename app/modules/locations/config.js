@@ -3,7 +3,7 @@ function config($stateProvider) {
   .state("locations", {
     url: '/locations',
     controller: 'LocationsController as LocationsCtrl'
-    template: require('./view.locations.html')
+    template: require('./view.html')
   });
 }
 

@@ -1,47 +1,51 @@
 class LocationsController {
 
-  constructor($firebaseArray) {
-    let ref = new Firebase("https://29-auth-services.firebaseio.com/");
-    this._UserService = $firebaseArray(ref);
+  constructor(UserService) {
+    this._UserService = UserService;
 
+    this._UserService
+    .isLoggedIn()
+      .then((response) => {
+        this.user = response;
+      })
+      .catch((error) => {
+        this._$state.go("login");
+      });
 
-
-    login() {
-      this._UserService
-        .login(this.user)
-        .then((response) => {
-          this._$state.go("profile");
-        });
-    }
-
-    this.addresses = [ {
-        address: "500 President Clinton Ave",
-        city: "Little Rock",
-        State: "Arkansas"
-        }
-
-        {
-          address: "400 President Clinton Ave",
-        }
-
-        {
-          address: "425 W Capital Ave",
-        }
-
-      ]
-
-    }
-
-      yellAddress(e) {
-
-        alert(`Hey, I'm at ${this.addresses[this.id].address}`);
-      }
-
-        clickMarker() {
-
-      }
-    }
   }
+
+    // this.address = [ {
+    //     address: "11600 N Rodney Parham Rd Ste B",
+    //     city: "Little Rock",
+    //     State: "Arkansas"
+    //     }
+    //
+    //     {
+    //       address: "11410 North Rodney Parham Rd",
+    //       city: "Little Rock",
+    //       State: "Arkansas"
+    //     }
+    //
+    //     {
+    //       address: "Valley Village Shopping Center, 11319 N Rodney Parham Rd",
+    //       city: "Little Rock",
+    //       State: "Arkansas"
+    //     }
+    //
+    //   ]
+    //
+    // }
+
+      // yellAddress(e) {
+      //
+      //   alert(`Hey, I'm at ${this.addresses[this.id].address}`);
+      // }
+      //
+      //   clickMarker() {
+      //
+      // }
+  //   }
+  // }
 }
 
 export default LocationsController;
