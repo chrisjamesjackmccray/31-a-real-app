@@ -8,7 +8,7 @@ let locations = angular.module('tiy.locations', []);
 
 locations.config(config);
 locations.controller('LocationsController', controller);
-// wire up the service
+locations.service('LocationsService', service)
 
 
 export default locations;

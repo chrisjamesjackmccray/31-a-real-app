@@ -1,10 +1,10 @@
-<form class="locationsform">
-   <input class="address" type="text" placeholder="address" ng-model="LocationsCtrl.Logged()">
-   <input class="city" type="text" placeholder="city" ng-model="LocationsCtrl.Logged()">
-   <input class="state" type="text" placeholder="state" ng-model="LocationsCtrl.Logged()">
+<form class="locationsform" ng-submit="locationsCtrl.isLoggedIn()">
+   <input class="address" type="text" placeholder="address" ng-model="LocationsCtrl.isLoggedIn()">
+   <input class="city" type="text" placeholder="city" ng-model="LocationsCtrl.isLoggedIn()">
+   <input class="state" type="text" placeholder="state" ng-model="LocationsCtrl.isLoggedIn()">
 </form>
 
-<div id="ngmap"></div>
+<div id="ngMap"></div>
 
 <h4> Sample Text </h4>
 
